@@ -1,5 +1,10 @@
 require "./SandCrystal/*"
+require "kemal"
 
 module SandCrystal
-  hi
+  get "/" do
+    "Hello World!"
+  end
 end
+
+Kemal.run
