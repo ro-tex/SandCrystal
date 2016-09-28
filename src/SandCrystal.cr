@@ -7,4 +7,4 @@ module SandCrystal
   end
 end
 
-Kemal.run
+#Kemal.run
