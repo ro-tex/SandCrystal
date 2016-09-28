@@ -1,6 +1,6 @@
-# SandCrystal
+# SandCrystal [![Build Status](https://travis-ci.org/ro-tex/SandCrystal.svg?branch=master)](https://travis-ci.org/ro-tex/SandCrystal)
 
-TODO: Write a description here
+This is my Crystal sandbox where I'm going to learn the language, play around with it and keep some notes in the form of either text files or pure code.
 
 ## Installation
 
