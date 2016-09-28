@@ -1,9 +1,7 @@
 require "./spec_helper"
 
 describe SandCrystal do
-  # TODO: Write tests
-
   it "works" do
-    false.should eq(true)
+    SandCrystal.hi.should eq(nil)
   end
 end
