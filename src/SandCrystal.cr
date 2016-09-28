@@ -1,5 +1,9 @@
 require "./SandCrystal/*"
 
 module SandCrystal
-  # TODO Put your code here
+  def self.hi
+    puts "Hello World!"
+  end
+
+  hi
 end
