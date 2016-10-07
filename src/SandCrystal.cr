@@ -1,10 +1,7 @@
 require "./SandCrystal/*"
-require "kemal"
 
 module SandCrystal
-  get "/" do
-    "Hello World!"
+  def hi
+    puts "Hello!"
   end
 end
-
-#Kemal.run
