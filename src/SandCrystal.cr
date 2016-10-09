@@ -1,9 +1,15 @@
 require "./SandCrystal/*"
 
 module SandCrystal
+  MESSAGE = "Hello!"
+
   class Sand
     def hi
-      say "Hello!"
+      say MESSAGE
+    end
+
+    def hi(msg)
+      hi
     end
 
     # Notice the paretheses and the spaces around the column - those re required
@@ -25,5 +31,5 @@ module SandCrystal
   s.hi("from the module")
 end
 
-# This is how we need tp instantiate outside the module
+# This is how we need to instantiate outside the module:
 s_out = SandCrystal::Sand.new
