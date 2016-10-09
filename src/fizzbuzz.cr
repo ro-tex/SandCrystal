@@ -32,6 +32,7 @@ module Fizzbuzz
   end
 end
 
+# This is a rogue method outside of any module!
 def fizzbuzz
   (1..100).each do |n|
     res = ""
@@ -41,6 +42,3 @@ def fizzbuzz
     puts res
   end
 end
-
-# Fizzbuzz.fizzbuzz
-fizzbuzz
