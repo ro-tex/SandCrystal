@@ -4,12 +4,8 @@ module SandCrystal
   MESSAGE = "Hello!"
 
   class Sand
-    def hi
+    def hi(*msg)
       say MESSAGE
-    end
-
-    def hi(msg)
-      hi
     end
 
     # Notice the paretheses and the spaces around the column - those re required
@@ -28,7 +24,7 @@ module SandCrystal
   end
 
   s = Sand.new
-  s.hi("from the module")
+  s.hi
 end
 
 # This is how we need to instantiate outside the module:
