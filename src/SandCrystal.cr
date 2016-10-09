@@ -6,6 +6,7 @@ module SandCrystal
       say "Hello!"
     end
 
+    # Notice the paretheses and the spaces around the column - those re required
     def hi(msg : String)
       say msg
     end
@@ -20,9 +21,9 @@ module SandCrystal
     end
   end
 
-  sa = Sand.new
-  sa.hi("from the module")
+  s = Sand.new
+  s.hi("from the module")
 end
 
-s = SandCrystal::Sand.new
-s.hi
+# This is how we need tp instantiate outside the module
+s_out = SandCrystal::Sand.new
