@@ -15,6 +15,10 @@ module ThreadPlay
 
   class Sender
     def send(msg, times)
+      # `send` is a blocking operation, that's why this works
+      # if it wasn't or if we `send` in a new fiber then we would
+      # hit the END_PHRASE sending immediately (cause it has no delay)
+      # and our listener woul exit before it can do what we want it to do
       times.times do |seq_num|
         Fiber.sleep(Random.rand(5))
         CHANNEL.send "#{msg} #{seq_num}"
