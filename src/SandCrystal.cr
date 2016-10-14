@@ -23,9 +23,5 @@ module SandCrystal
     end
   end
 
-  s = Sand.new
-  s.hi
+  Sand.new.hi
 end
-
-# This is how we need to instantiate outside the module:
-s_out = SandCrystal::Sand.new
