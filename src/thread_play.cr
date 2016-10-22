@@ -27,10 +27,28 @@ module ThreadPlay
     end
   end
 
-  s1 = Sender.new
-  s2 = Sender.new
-  spawn { s1.send("hello", 5) }
-  spawn { s2.send("oi!", 9) }
-  Listener.new.listen # listening until the first END_PHRASE
-  Listener.new.listen # listening from the first to the second END_PHRASE
+  # s1 = Sender.new
+  # s2 = Sender.new
+  # spawn { s1.send("hello", 5) }
+  # spawn { s2.send("oi!", 9) }
+  # Listener.new.listen # listening until the first END_PHRASE
+  # Listener.new.listen # listening from the first to the second END_PHRASE
+  class CpuHoarder
+    def self.call(ch, secs)
+      start = Time.now
+      counter = 0
+      while (Time.now < start + secs.second)
+        counter += 1
+      end
+      ch.send(nil)
+    end
+  end
+
+  # ch = Channel(Nil).new
+  # 10.times do
+  #   spawn {
+  #     CpuHoarder.call(ch, 15)
+  #   }
+  # end
+  # ch.receive # this is the mechanism for waiting for fibers to finish.
 end
